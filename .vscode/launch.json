@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI: Run Server",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--reload"
+            ],
+            "jinja": true,
+            "justMyCode": false
+        },
+        {
+            "name": "FastAPI: Debug Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: Run Tests",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-v"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Python: Run Tests with Coverage",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "--cov=app",
+                "--cov-report=term",
+                "--cov-report=html"
+            ],
+            "justMyCode": false
+        }
+    ]
+}
